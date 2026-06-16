@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner Page</title>
+    
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282a36;
+        }
+
+        .container {
+            background-color: white;
+            width: 100%;
+            max-width: 400px;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 0px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            height: 200px; 
+            background-image: url("../Images/front.png"); 
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .logo {
+            position: absolute; 
+            top: 63%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            width: 125px; 
+            height: auto; 
+            z-index: 1; 
+        }
+
+        .scanner-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            margin-top: -180px; /* Adjusted margin for spacing */
+        }
+
+        .nav-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 15px 0;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-top: 1px solid #ccc;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: #555;
+            font-size: 16px;
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Change to column to stack icon above text */
+            align-items: center; /* Align icon and text in the center */
+        }
+
+        .nav-bar a i {
+            font-size: 20px;
+            margin-bottom: 15px; /* Increased margin for extra vertical spacing */
+            color: #0059b3; 
+        }
+
+        .nav-bar a.active {
+            color: #0059b3; 
+        }
+
+        .qr-code {
+            margin-top: 0; /* Removed margin to move the QR code higher */
+            width: 250px; /* Decreased width for the QR code */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../Images/logo.png" alt="Logo" class="logo"> 
+        </div>
+
+        <div class="scanner-section">
+            <img src="../Images/qrcode.png" alt="QR Code" class="qr-code"> <!-- QR code image added here -->
+            <!-- Slogan removed -->
+        </div>
+
+        <div class="nav-bar">
+            <a href="you.html">
+                <i class="fas fa-user"></i> <!-- Changed the icon to "user" -->
+                You
+            </a>
+            <a href="discover.html">
+                <i class="fas fa-compass"></i> 
+                Discover
+            </a>
+            <a href="#" class="active">
+                <i class="fas fa-qrcode"></i> 
+                Scan
+            </a>
+            <a href="orders.html"> <!-- Updated to link to the orders page -->
+                <i class="fas fa-receipt"></i> 
+                Orders
+            </a>
+            <a href="more.html">
+                <i class="fas fa-ellipsis-h"></i> 
+                More
+            </a>
+        </div>
+    </div>
+
+    <!-- Load Font Awesome Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

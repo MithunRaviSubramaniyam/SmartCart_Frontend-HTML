@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #282a36; /* Dark background */
+        }
+
+        .container {
+            background-color: white;
+            width: 400px;
+            height: 90vh;
+            border-radius: 0px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .item-list {
+            padding: 10px;
+            border: 2px solid #0059b3;
+            border-radius: 10px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            overflow-y: auto;
+            position: relative;
+            height: 70%; /* Increased height for better visibility */
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            font-size: 18px; /* Increased font size for item list */
+        }
+
+        .order-item img {
+            width: 80px; /* Image width */
+            height: 80px; /* Image height */
+            margin-right: 10px;
+        }
+
+        /* Total Amount Display */
+        .total-display {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px; /* Increased padding */
+            border-top: 2px solid #0059b3; /* Blue top border */
+            background: -webkit-linear-gradient(right, #003366, #004080, #0059b3, #0073e6); /* Gradient background */
+            color: white; /* White text for contrast */
+            margin: 20px;
+            border-radius: 10px;
+            position: relative;
+            animation: fadeIn 0.5s ease, pulse 1.5s infinite; /* Animation effect */
+            font-size: 24px; /* Increased font size for total */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .total-display span {
+            font-weight: bold;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 15px 0;
+            border-top: 1px solid #ccc;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: #555;
+            font-size: 16px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-bar a i {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #0059b3;
+        }
+
+        .nav-bar a.active {
+            color: #0059b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item-list">
+            <!-- Order items with images -->
+            <div class="order-item">
+                <img src="../Images/chocolate.png" alt="Chocolate">
+                <span>Chocolate</span>
+                <span>₹50</span>
+            </div>
+            <div class="order-item">
+                <img src="../Images/apple.png" alt="Apple">
+                <span>Apple</span>
+                <span>₹30</span>
+            </div>
+            <div class="order-item">
+                <img src="../Images/lays.png" alt="Lays">
+                <span>Lays</span>
+                <span>₹20</span>
+            </div>
+            <div class="order-item">
+                <img src="../Images/cocacola.png" alt="Coca-Cola">
+                <span>Coca-Cola</span>
+                <span>₹60</span>
+            </div>
+            <div class="order-item">
+                <img src="../Images/grapes.png" alt="Grapes">
+                <span>Grapes</span>
+                <span>₹40</span>
+            </div>
+            <div class="order-item">
+                <img src="../Images/container.png" alt="Containers">
+                <span>Containers</span>
+                <span>₹100</span>
+            </div>
+        </div>
+
+        <!-- Total Amount Display -->
+        <div class="total-display">
+            <span>Total:</span>
+            <span>₹ 200</span> <!-- Updated total amount -->
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="nav-bar">
+            <a href="you.html">
+                <i class="fas fa-user"></i>
+                You
+            </a>
+            <a href="discover.html">
+                <i class="fas fa-compass"></i>
+                Discover
+            </a>
+            <a href="next-page.html">
+                <i class="fas fa-qrcode"></i>
+                Scan
+            </a>
+            <a href="#" class="active">
+                <i class="fas fa-receipt"></i>
+                Orders
+            </a>
+            <a href="more.html">
+                <i class="fas fa-ellipsis-h"></i>
+                More
+            </a>
+        </div>
+    </div>
+
+    <!-- Load Font Awesome Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
